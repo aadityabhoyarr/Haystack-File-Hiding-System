@@ -1,1 +1,1 @@
-# Mayhem-File-Hiding-System-MFHS-
+# Mayhem-File-Hiding-System (MFHS)
