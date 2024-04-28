@@ -8,19 +8,25 @@ HFHS provides two scripts:
 2.  [**del.py**](del.py): This script deletes the folders and files created by the `main.py` script in a fast and efficient manner.
 
 
+Certainly! Here's the updated "How to Use" section with instructions for running the scripts via the command line:
+
 ## How to Use
 
 To use HFHS:
 
-1.  Clone the repository to your local machine.
-2.  Navigate to the repository directory.
-3.  Open `main.py` in a text editor.
-4.  Adjust the `desired_nesting_level` and `num_threads` variables according to your needs:
-    -   **desired_nesting_level**: This variable determines how deep the folder structure will be. Higher values result in more complex folder structures with more levels of nesting. Lower values create simpler structures. Adjust this value based on how hidden you want your files to be within the folder maze. For example, setting `desired_nesting_level = 5` will create a moderately complex folder structure.
-    -   **num_threads**: This variable controls the concurrency level, i.e., the number of threads used for parallel execution of folder creation operations. Increasing this value may speed up the folder creation process, but it depends on your system's capabilities. Be cautious not to set it too high, as it may overload your system. For example, setting `num_threads = 205` will utilize 205 threads for parallel execution.
-5.  Save the changes to `main.py`.
-6.  Run `main.py` to generate the folder structure.
-7.  Run `del.py` to delete the created folders and files.
+1. Clone the repository to your local machine.
+2. Navigate to the repository directory.
+3. Open `main.py` in a text editor.
+4. Adjust the `desired_nesting_level` and `num_threads` variables according to your needs:
+    - **desired_nesting_level**: This variable determines how deep the folder structure will be. Higher values result in more complex folder structures with more levels of nesting. Lower values create simpler structures. Adjust this value based on how hidden you want your files to be within the folder maze. For example, setting `desired_nesting_level = 5` will create a moderately complex folder structure.
+    - **num_threads**: This variable controls the concurrency level, i.e., the number of threads used for parallel execution of folder creation operations. Increasing this value may speed up the folder creation process, but it depends on your system's capabilities. Be cautious not to set it too high, as it may overload your system. For example, setting `num_threads = 205` will utilize 205 threads for parallel execution.
+5. Save the changes to `main.py`.
+6. To run the script via the command line, open a terminal or command prompt:
+    - Navigate to the directory containing `main.py`.
+    - Run the command: `python main.py`.
+7. After the script finishes execution, run `del.py` to delete the created folders and files:
+    - In the same terminal or command prompt, navigate to the directory containing `del.py`.
+    - Run the command: `python del.py`.
 
 ## About Nesting Level
 
@@ -40,8 +46,11 @@ The time taken to generate folder structures at different nesting levels may var
 ## Folder Structure Graph Representation
 
 Here's a graphical representation of the folder structure created by HFHS at nesting level 3:
+<img src="https://github.com/aadityabhoyar/Haystack-File-Hiding-System/blob/main/media/Figure_1.png">
+
 
 ## Force-directed graph drawing of 1110
 
 Here's a force-directed graph drawing of the folder structure created by HFHS at nesting level 3:
+<img src="https://github.com/aadityabhoyar/Haystack-File-Hiding-System/blob/main/media/Figure_2.png">
 
