@@ -1,1 +1,1 @@
-# Haystack File Hiding System (HFHS)
+# --- Haystack File Hiding System (HFHS) ---
