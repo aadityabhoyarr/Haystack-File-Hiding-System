@@ -43,14 +43,11 @@ The time taken to generate folder structures at different nesting levels may var
 | Level 9       | 1111111110        | Approximately 904.47 hours or 37.69 days |
 | Level 10      | 11111111110       | Approximately 13446.25 hours or 560.26 days |
 
-## Folder Structure Graph Representation
-
 Here's a graphical representation of the folder structure created by HFHS at nesting level 3:
 <img src="https://github.com/aadityabhoyar/Haystack-File-Hiding-System/blob/main/media/Figure_1.png">
 
 
-## Force-directed graph drawing of 1110
+## Force-directed graph drawing of 1110 Folders at level 3
 
-Here's a force-directed graph drawing of the folder structure created by HFHS at nesting level 3:
 <img src="https://github.com/aadityabhoyar/Haystack-File-Hiding-System/blob/main/media/Figure_2.png">
 
