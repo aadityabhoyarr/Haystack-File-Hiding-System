@@ -4,8 +4,8 @@
 ## How it can be used
 
 HFHS provides two scripts:
-1.  **main.py**: This script generates a complex folder structure, making it difficult to locate specific files without prior knowledge of the pattern used for folder creation.
-2.  **del.py**: This script deletes the folders and files created by the `main.py` script in a fast and efficient manner.
+1.  [**main.py**](main.py): This script generates a complex folder structure, making it difficult to locate specific files without prior knowledge of the pattern used for folder creation.
+2.  [**del.py**](del.py): This script deletes the folders and files created by the `main.py` script in a fast and efficient manner.
 
 
 ## How to Use
