@@ -17,7 +17,7 @@ This script deletes the folders and files created by the `main.py` script in a f
 
 1. Open `main.py` and configure key parameters:
 ```python
-root_folder = "Folders4"              # Base folder name
+root_folder = "Folders"              # Base folder name
 desired_nesting_level = 5             # Depth of folder structure
 folders = [str(num) for num in range(10)]  # Subfolder names (0-9)
 num_threads = 205                     # Number of parallel threads
