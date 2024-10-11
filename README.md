@@ -1,47 +1,74 @@
 # Haystack File Hiding System (HFHS)
-####  HFHS (Haystack File Hiding System) is designed to protect your important files by hiding them within a complex maze of folders. Just like finding a needle in a haystack, locating these files without knowing the exact pattern used for folder creation is near impossible. Keep your files safe and secure with HFHS!"
 
-## How it can be used
+## Overview
+HFHS (Haystack File Hiding System) is a sophisticated file protection system that creates an intricate maze of nested folders to secure files. Just as finding a needle in a haystack is nearly impossible without knowing where to look, locating files within this complex directory structure becomes extremely challenging without knowledge of the exact pattern used.
 
-HFHS provides two scripts:
-1.  [**main.py**](main.py): This script generates a complex folder structure, making it difficult to locate specific files without prior knowledge of the pattern used for folder creation.
-2.  [**del.py**](del.py): This script deletes the folders and files created by the `main.py` script in a fast and efficient manner.
+## System Components
 
+### 1. Folder Generation Script (`main.py`)
+This script generates a complex folder structure, making it difficult to locate specific files without prior knowledge of the pattern used for folder creation.
 
-Certainly! Here's the updated "How to Use" section with instructions for running the scripts via the command line:
+### 2. Cleanup Utility (`del.py`)
+This script deletes the folders and files created by the `main.py` script in a fast and efficient manner.
 
-## How to Use
+## Usage Guide
 
-To use HFHS:
+### Basic Setup and Configuration
 
-1. Clone the repository to your local machine.
-2. Navigate to the repository directory.
-3. Open `main.py` in a text editor.
-4. Adjust the `desired_nesting_level` and `num_threads` variables according to your needs:
-    - **desired_nesting_level**: This variable determines how deep the folder structure will be. Higher values result in more complex folder structures with more levels of nesting. Lower values create simpler structures. Adjust this value based on how hidden you want your files to be within the folder maze. For example, setting `desired_nesting_level = 5` will create a moderately complex folder structure.
-    - **num_threads**: This variable controls the concurrency level, i.e., the number of threads used for parallel execution of folder creation operations. Increasing this value may speed up the folder creation process, but it depends on your system's capabilities. Be cautious not to set it too high, as it may overload your system. For example, setting `num_threads = 205` will utilize 205 threads for parallel execution.
-5. Save the changes to `main.py`.
-6. To run the script via the command line, open a terminal or command prompt:
-    - Navigate to the directory containing `main.py`.
-    - Run the command: `python main.py`.
-7. After the script finishes execution, run `del.py` to delete the created folders and files:
-    - In the same terminal or command prompt, navigate to the directory containing `del.py`.
-    - Run the command: `python del.py`.
+1. Open `main.py` and configure key parameters:
+```python
+root_folder = "Folders4"              # Base folder name
+desired_nesting_level = 5             # Depth of folder structure
+folders = [str(num) for num in range(10)]  # Subfolder names (0-9)
+num_threads = 205                     # Number of parallel threads
+```
 
-## About Nesting Level
+2. Run the folder generation script:
+```bash
+python main.py
+```
 
-The time taken to generate folder structures at different nesting levels may vary based on your computer's CPU specifications. The following information is based on a developer PC with a CPU containing `4 threads` and `4 cores`:
+3. To remove the structure:
+```bash
+python del.py
+```
 
-| Nesting Level | Number of Folders | Time Taken          |
-|---------------|-------------------|---------------------|
-| Level 3       | 1110              | 0.74 seconds        |
-| Level 4       | 11110             | 2.42 seconds        |
-| Level 5       | 111110            | 67.62 seconds       |
-| Level 6       | 1111110           | 1002.05 seconds     |
-| Level 7       | 11111110          | Approximately 4.13 hours |
-| Level 8       | 111111110         | Approximately 61.19 hours |
-| Level 9       | 1111111110        | Approximately 904.47 hours or 37.69 days |
-| Level 10      | 11111111110       | Approximately 13446.25 hours or 560.26 days |
+### Folder Structure Visualization
+
+The system creates a nested structure like this:
+```
+Folders4/
+├── 0/
+│   ├── 0/
+│   │   ├── 0/
+│   │   ├── 1/
+│   │   └── ...
+│   ├── 1/
+│   │   ├── 0/
+│   │   ├── 1/
+│   │   └── ...
+│   └── ...
+├── 1/
+│   ├── 0/
+│   ├── 1/
+│   └── ...
+└── ...
+```
+
+### Performance Metrics
+
+Execution times based on a 4-core/4-thread CPU:
+
+| Nesting Level | Folders Created | Time Required |
+|---------------|----------------|---------------|
+| 3 | 1,110 | 0.74 seconds |
+| 4 | 11,110 | 2.42 seconds |
+| 5 | 111,110 | 67.62 seconds |
+| 6 | 1,111,110 | 16.7 minutes |
+| 7 | 11,111,110 | 4.13 hours |
+| 8 | 111,111,110 | 2.5 days |
+| 9 | 1,111,111,110 | 37.69 days |
+| 10 | 11,111,111,110 | 560.26 days |
 
 Here's a graphical representation of the folder structure created by HFHS at nesting level 3:
 <img src="https://github.com/aadityabhoyar/Haystack-File-Hiding-System/blob/main/media/Figure_1.png">
